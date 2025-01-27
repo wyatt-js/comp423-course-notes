@@ -43,9 +43,6 @@ touch devcontainer.json
     "go.gopath": "/go",
     "go.useLanguageServer": true
   },
-  "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
-  },
   "postCreateCommand": "go mod init [my-go-project]",
 }
 ```
@@ -55,8 +52,11 @@ touch devcontainer.json
     * Specifies the Microsoft Go Dev Container base image
     * Installs the official Go VS Code plugin
     * Sets the Go workspace path and enables the Go language server
-    * Ensures Git is available inside the container
     * Initializes a Go module for the project upon container creation
+
+* Start the dev container by selecting the following option in the VSCode Command Palette:
+
+`> Dev Containers: Reopen in Container`
 
 ## Creating a New Project
 * Create a file [name].go in which to write your code
@@ -110,4 +110,8 @@ func main() {
 hello.exe  # (Windows)
 ```
 
-* This is different from the run command in that it produces and saves an executable file, whereas run does not save an executable, but only runs it.
+:::warning
+
+This is different from the run command in that it produces and saves an executable file, whereas run does not save an executable, but only runs it.
+
+:::
