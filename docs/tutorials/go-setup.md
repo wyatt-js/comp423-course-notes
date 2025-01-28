@@ -110,8 +110,4 @@ func main() {
 hello.exe  # (Windows)
 ```
 
-:::warning
-
 This is different from the run command in that it produces and saves an executable file, whereas run does not save an executable, but only runs it.
-
-:::
